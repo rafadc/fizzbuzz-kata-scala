@@ -23,6 +23,10 @@ class fizzBuzzSpec extends Specification {
        Fizzbuzz(20) must_== "buzz"
     }
 
+    "return 'fizzbuzz' if parameter divisible by 3 and 5" in {
+       Fizzbuzz(15) must_== "fizzbuzz"
+    }
+
   }
 }
 
