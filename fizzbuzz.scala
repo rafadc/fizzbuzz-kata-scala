@@ -1,6 +1,8 @@
 import org.specs.Specification
 
-
+object Fizzbuzz {
+  def apply(parameter : Integer) = parameter
+}
 
 class fizzBuzzSpec extends Specification {
 
