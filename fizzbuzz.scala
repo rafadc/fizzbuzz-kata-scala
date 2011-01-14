@@ -2,6 +2,7 @@ import org.specs.Specification
 
 object Fizzbuzz {
   def apply(parameter : Int) = parameter match {
+    case number if (number % 3 == 0) && (number % 5 == 0) => "fizzbuzz"
     case number if number % 3 == 0 => "fizz"
     case number if number % 5 == 0 => "buzz"    
     case _ => parameter
