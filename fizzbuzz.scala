@@ -16,11 +16,11 @@ class fizzBuzzSpec extends Specification {
        Fizzbuzz(1) must_== 1
     }
 
-    "return 'fizz' if parameter divisible by 3" in {
+    "return 'fizz' if parameter divisible by 3 and not by 5" in {
        Fizzbuzz(6) must_== "fizz"
     }
 
-    "return 'buzz' if parameter divisible by 5" in {
+    "return 'buzz' if parameter divisible by 5 and not by 3" in {
        Fizzbuzz(20) must_== "buzz"
     }
 
