@@ -1,8 +1,10 @@
 import org.specs.Specification
-import java.lang.Integer
 
 object Fizzbuzz {
-  def apply(parameter : Integer) = parameter
+  def apply(parameter : Int) = parameter match {
+    case number if number % 3 == 0 => "fizz"
+    case _ => parameter
+  }
 }
 
 class fizzBuzzSpec extends Specification {
