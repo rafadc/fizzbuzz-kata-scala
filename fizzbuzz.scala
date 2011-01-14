@@ -1,4 +1,5 @@
 import org.specs.Specification
+import java.lang.Integer
 
 object Fizzbuzz {
   def apply(parameter : Integer) = parameter
