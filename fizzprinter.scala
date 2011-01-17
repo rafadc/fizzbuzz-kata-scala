@@ -4,7 +4,7 @@ import org.specs.mock.Mockito
 class fizzPrinterSpec extends Specification with Mockito {
   "Fizzprinter" should {
     "print fizzbuzz for numbers for 1 to 100" in {
-       val fizzCalculator = mock(Fizzcalculator)
+       val fizzCalculator = mock(FizzCalculator)
 
        val fizzPrinter = new FizzPrinter(fizzCalculator)
 
