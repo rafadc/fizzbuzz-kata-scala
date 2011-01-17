@@ -2,8 +2,9 @@ import org.specs.Specification
 import org.specs.mock.Mockito
 
 class FizzPrinter(calculator : FizzCalculator){
-  def printFrom1To100 {
 
+  def printFrom1To100 {
+    (1 until 100 inclusive) foreach { value => println(calculator.calculate(value)) }
   }
 }
 
