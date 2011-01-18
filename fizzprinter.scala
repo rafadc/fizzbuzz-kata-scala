@@ -24,15 +24,16 @@ class fizzPrinterSpec extends Specification with Mockito {
     "print fizzbuzz for numbers for 1 to 100" in {
        val fizzCalculator = mock[FizzCalculator]
        val printer = mock[Printer]
+       val from1to100 = (1 until 100 inclusive)
 
        val fizzPrinter = new FizzPrinter(fizzCalculator,printer)
 
-       (1 until 100 inclusive) foreach {value => fizzCalculator.calculate(value) returns value.toString }
+       from1to100 foreach {value => fizzCalculator.calculate(value) returns value.toString }
 
        fizzPrinter.printFrom1To100
 
-       (1 until 100 inclusive) foreach { value => there was one(fizzCalculator).calculate(value) }
-       (1 until 100 inclusive) foreach { value => there was one(printer).print(value.toString) }
+       from1to100 foreach { value => there was one(fizzCalculator).calculate(value) }
+       from1to100 foreach { value => there was one(printer).print(value.toString) }
        
     }
   }
